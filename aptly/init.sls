@@ -6,9 +6,7 @@
 include:
   - aptly.install
   - aptly.config
-  - aptly.service
 {% else %}
 'aptly-formula disabled':
   test.succeed_without_changes
 {% endif %}
-

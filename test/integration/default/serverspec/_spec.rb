@@ -4,14 +4,13 @@ require 'serverspec'
 set :backend, :exec
 
 
-describe package('screen') do
+describe package('aptly') do
   it { should be_installed }
 end
 
-describe file('/tmp/config.conf'), :if => os[:family] == 'debian' do
+describe file('/etc/aptly.conf') do
     it { should be_file }
-    it { should be_mode 600 }
+    it { should be_mode 644 }
     it { should be_owned_by 'root' }
     it { should be_grouped_into 'root' }
-    its(:content) { should match /test string please ignore/ }
 end

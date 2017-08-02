@@ -1,10 +1,8 @@
 # aptly-formula
+Install and configure [aptly](https://www.aptly.info/)
 
-Purpose of formula. Include a short description of what the formula does.
-
-
-Describe in a readable form the states this formula supports with examples how to use those states.
-
+## Development
+Fork the repo, clone that repo, then make a new branch.
 
 Install and setup brew:
 ```
@@ -31,3 +29,10 @@ Run a converge on the default configuration:
 ```
 kitchen converge default
 ```
+
+Make sure the tests pass:
+```
+kitchen test
+```
+
+Then commit and push the changes. Finally, open a PR.

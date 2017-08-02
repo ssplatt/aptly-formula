@@ -9,25 +9,29 @@ provisioner:
   salt_copy_filter:
     - .kitchen
     - .git
-  sudo: false
   state_top:
     base:
       "*":
         - test.mockup
         - aptly
+  pillars:
+    top.sls:
+      base:
+        "*":
+          - aptly
 
 platforms:
   - name: debian-8
 
 suites:
   - name: default
+    provisioner:
+      pillars:
+        aptly.sls:
+          aptly:
+            enabled: true
 
   - name: custom
     provisioner:
       pillars-from-files:
         aptly.sls: pillar-custom.sls
-      pillars:
-        top.sls:
-          base:
-            "*":
-              - aptly

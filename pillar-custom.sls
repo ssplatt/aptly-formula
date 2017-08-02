@@ -11,7 +11,7 @@ aptly:
     dependencyFollowAllVariants: false
     dependencyFollowSource: false
     gpgDisableSign: false
-    gpgDisableVerify": false
+    gpgDisableVerify: false
     downloadSourcePackages: false
-    ppaDistributorID": "ubuntu"
+    ppaDistributorID: "ubuntu"
     ppaCodename: ""
