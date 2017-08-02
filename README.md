@@ -1,4 +1,6 @@
 # aptly-formula
+[![Build Status](https://travis-ci.org/ssplatt/aptly-formula.svg?branch=master)](https://travis-ci.org/ssplatt/aptly-formula)
+
 Install and configure [aptly](https://www.aptly.info/)
 
 ## Development
